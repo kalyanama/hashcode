@@ -63,6 +63,7 @@ int interestingness(int tags1_len, char** tags1, int tags2_len, char** tags2)
         }
     }
     in_2_not_1 += tags2_len - j;
+    in_1_not_2 += tags1_len - i;
 
     return common < in_1_not_2 ? common : in_1_not_2 < in_2_not_1 ? in_1_not_2 : in_2_not_1;
 }

@@ -148,4 +148,9 @@ add_executable(hashcode
         main.c
         parsing.c
         parsing.h
-        photo.h)
+        photo.h
+        graph_builder.h
+        graph_builder.c
+        path_finder.h
+        path_finder.c
+        )
