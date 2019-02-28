@@ -8,6 +8,8 @@ include_directories(libftprintf/inc)
 include_directories(libftprintf/inc/ft_printf)
 
 add_executable(hashcode
+        output.c
+        output.h
         free_memory.c
         libftprintf/inc/ft_printf/colors.h
         libftprintf/inc/ft_printf/ft_printf.h
