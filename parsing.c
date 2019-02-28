@@ -27,9 +27,10 @@ size_t next_len(const char *line)
 char **get_tags(size_t tag_amount, char *line)
 {
 	char **res;
+	int i;
 
 	res = malloc(sizeof(char *) * tag_amount);
-	int i = 0;
+	i = 0;
 	line = strchr(line, ' ') + 1;
 	size_t len;
 	while (i < tag_amount)
@@ -51,19 +52,19 @@ void parse_one_photo(t_parsed *set, char *line)
 
 }
 
-t_parsed **parse_input(char *argv, size_t *photos_amoun)
+t_parsed **parse_input(char *argv, size_t *photos_amount)
 {
 	char *line = NULL;
 	t_parsed **data_set;
+	int fd;
+	int i;
 
-
-	int fd = open(argv, O_RDONLY);
-
+	fd = open(argv, O_RDONLY);
 	get_next_line(fd, &line);
-	*photos_amoun = ft_atoi(line);
-
-	data_set = malloc(sizeof(data_set) * (*photos_amoun));
-	int i = 0;
+	*photos_amount = (size_t) ft_atoi(line);
+	ft_strdel(&line);
+	data_set = malloc(sizeof(data_set) * (*photos_amount + 1));
+	i = 0;
 	while (get_next_line(fd, &line))
 	{
 		data_set[i] = malloc(sizeof(t_parsed));

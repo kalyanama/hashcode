@@ -11,6 +11,7 @@ typedef struct
 	char	**tags;
 }			t_parsed;
 
-t_parsed ** parse_input(char *argv, size_t *photos_amoun);
+t_parsed ** parse_input(char *argv, size_t *photos_amount);
+void free_dataset(t_parsed **dataset, size_t count);
 
 #endif
