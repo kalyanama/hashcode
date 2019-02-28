@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/hashcode.dir/main.c.o  -o hashcode 
