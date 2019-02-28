@@ -3,4 +3,4 @@ project(hashcode C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(hashcode main.c)
+add_executable(hashcode parsing.c parsing.h photo.h  main.c)
